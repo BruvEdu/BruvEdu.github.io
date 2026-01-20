@@ -1,0 +1,124 @@
+/* General Page Settings */
+body {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* SIDEBAR STYLING */
+.sidebar {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar-brand h2 {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ffffff;
+    background-color: #333;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+}
+
+/* MAIN CONTENT & BUTTON */
+#main {
+    transition: margin-left .5s;
+    text-align: center;
+}
+
+.openbtn {
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+}
+
+/* BANNER WITH TRANSPARENT IMAGE */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
+    background-color: #fdf5e6;
+}
+
+.banner-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* This must match your uploaded filename exactly */
+    background-image: url('uwp4614300.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4; /* Adjust this to make image more or less visible */
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.banner-title {
+    font-size: 4rem;
+    color: #1a1a1a;
+    text-shadow: 2px 2px 0px #fff; /* Makes text pop */
+}
+
+/* WELCOME TEXT */
+.welcome-text {
+    color: #b8a000;
+    font-size: 2.8rem;
+    margin-top: 40px;
+}
+
+.divider {
+    width: 80%;
+    border: 0;
+    border-top: 2px solid #eee;
+    margin: 40px auto;
+}
