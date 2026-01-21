@@ -1,14 +1,16 @@
-function toggleNav() {
-    var sidebar = document.getElementById("mySidebar");
-    var main = document.getElementById("main");
+function filterGames() {
+    let input = document.getElementById('gameSearch').value.toLowerCase();
+    let cards = document.getElementsByClassName('game-card');
 
-    // If sidebar is 250px wide (open), close it
-    if (sidebar.style.width === "250px") {
-        sidebar.style.width = "0";
-        main.style.marginLeft = "0";
-    } else {
-        // Otherwise, open it
-        sidebar.style.width = "250px";
-        main.style.marginLeft = "250px";
+    // If we are on a page without cards (like Home), this won't crash
+    if (!cards.length) return; 
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].querySelector('h3').innerText.toLowerCase();
+        if (title.includes(input)) {
+            cards[i].style.display = "flex";
+        } else {
+            cards[i].style.display = "none";
+        }
     }
 }
