@@ -3,40 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derpy's Loot Box</title>
+    <title>Derpy's Loot Box - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
-        <div class="sidebar-brand">
-            <h2>Derpy's Loot Box</h2>
+    <nav class="top-nav">
+        <div class="nav-left">
+            <img src="logo.png" alt="Icon" class="nav-logo">
+            <span class="nav-brand">Derpy's Loot Box</span>
         </div>
-        <a href="#"> Home</a>
-        <a href="#"> Games</a>
-        <a href="#"> Proxy Links</a>
-        <a href="#"> Meet the Cook</a>
-    </div>
-
-    <div id="main">
-        <button class="openbtn" onclick="toggleNav()">☰ Menu</button>  
         
-        <div class="banner-container">
-            <div class="banner-overlay">
-                <h1 class="banner-title">Derpy's Loot Box</h1>
+        <div class="nav-center">
+            <div class="search-box">
+                <input type="text" id="gameSearch" placeholder="Search games..." onkeyup="filterGames()">
+                <span class="search-icon">🔍</span>
             </div>
         </div>
 
+        <div class="nav-right">
+            <a href="index.html" class="active">Home</a>
+            <a href="games.html">Games</a>
+        </div>
+    </nav>
+
+    <div class="banner-container">
+        <div class="banner-overlay">
+            <h1 class="banner-title">Derpy's Loot Box</h1>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="welcome-section">
             <h2 class="welcome-text">Welcome!</h2>
             <p>Welcome to Derpy's Loot Box!!</p>
-            <p>We have tons of games here! Come and check em' out!</p>
-            <hr class="divider">
-        </div>
-        
-        <div class="content-placeholder">
-            <p>Games coming soon...</p>
+            <p>Check out our massive collection of games on the Games page!</p>
+            <a href="games.html" class="cta-button">Browse Games</a>
         </div>
     </div>
 
