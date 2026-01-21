@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Derpy's Loot Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="nav-left">
+            <img src="logo.png" alt="Icon" class="nav-logo">
+            <span class="nav-brand">Derpy's Loot Box</span>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-box">
+                <input type="text" id="gameSearch" placeholder="Search games..." onkeyup="filterGames()">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="index.html">Home</a>
+            <a href="games.html" class="active">Games</a>
+        </div>
+    </nav>
+
+    <div class="banner-container">
+        <div class="banner-overlay">
+            <h1 class="banner-title">Games</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="games-grid">
+
+            <a href="https://www.google.com" target="_blank" class="game-card">
+                <div class="game-image-container">
+                    <img src="uwp4614300.jpeg" alt="Game 1" class="game-thumbnail">
+                </div>
+                <div class="game-info">
+                    <h3>Super Derp World</h3>
+                    <p>Adventure • Click to Play</p>
+                </div>
+            </a>
+
+            <a href="https://www.example.com" target="_blank" class="game-card">
+                <div class="game-image-container">
+                    <img src="uwp4614300.jpeg" alt="Game 2" class="game-thumbnail">
+                </div>
+                <div class="game-info">
+                    <h3>Loot Clicker</h3>
+                    <p>Strategy • Click to Play</p>
+                </div>
+            </a>
+
+            <a href="https://www.example.com" target="_blank" class="game-card">
+                <div class="game-image-container">
+                    <img src="uwp4614300.jpeg" alt="Game 3" class="game-thumbnail">
+                </div>
+                <div class="game-info">
+                    <h3>Space Runner</h3>
+                    <p>Arcade • Click to Play</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
