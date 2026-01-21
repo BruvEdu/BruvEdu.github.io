@@ -1,6 +1,81 @@
-/* ... Keep the Top Nav and Banner styles from the last step ... */
+/* 1. GENERAL PAGE STYLES */
+body {
+    font-family: "Comic Sans MS", cursive;
+    margin: 0;
+    background-color: #ffffff;
+}
 
-/* Welcome Section for Home Page */
+/* 2. TOP NAVIGATION BAR */
+.top-nav {
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left { display: flex; align-items: center; }
+.nav-brand { font-size: 1.2rem; font-weight: bold; margin-left: 10px; }
+.nav-logo { height: 30px; border-radius: 50%; }
+
+/* SEARCH BOX */
+.nav-center { flex-grow: 1; display: flex; justify-content: center; }
+.search-box {
+    position: relative;
+    width: 300px;
+}
+#gameSearch {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #333;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding-bottom: 5px;
+}
+.nav-right a.active { border-bottom: 3px solid #b8a000; }
+
+/* 3. BANNER SECTION */
+.banner-container {
+    position: relative;
+    height: 300px;
+    background-image: url('uwp4614300.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-overlay {
+    background: rgba(0, 0, 0, 0.4); 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-title {
+    color: white;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 4. WELCOME SECTION (The part you sent) */
 .welcome-section {
     text-align: center;
     padding: 50px 20px;
@@ -26,13 +101,4 @@
 .cta-button:hover {
     background-color: #b8a000;
     transform: scale(1.05);
-}
-
-/* Ensure the banner image works on all pages */
-.banner-container {
-    position: relative;
-    height: 300px;
-    background-image: url('uwp4614300.jpeg');
-    background-size: cover;
-    background-position: center;
 }
