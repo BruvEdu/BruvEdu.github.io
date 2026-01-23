@@ -2,7 +2,8 @@
 body {
     font-family: "Comic Sans MS", cursive;
     margin: 0;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* TOP NAVIGATION */
@@ -12,95 +13,106 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    height: 60px;
+    padding: 10px 30px;
+    height: 70px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .nav-left { display: flex; align-items: center; }
-.nav-brand { font-size: 1.2rem; font-weight: bold; margin-left: 10px; }
-.nav-logo { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
+.nav-brand { font-size: 1.4rem; font-weight: bold; margin-left: 12px; color: #fff; }
+.nav-logo { height: 45px; width: 45px; border-radius: 50%; border: 2px solid #b8a000; object-fit: cover; }
 
+/* SEARCH BAR IN NAV */
 .nav-center { flex-grow: 1; display: flex; justify-content: center; }
-.search-box { position: relative; width: 300px; }
+.search-box { position: relative; width: 350px; }
 #gameSearch {
     width: 100%;
-    padding: 8px 15px;
-    border-radius: 20px;
+    padding: 10px 15px;
+    border-radius: 25px;
     border: none;
     outline: none;
+    font-size: 16px;
 }
+.search-icon { position: absolute; right: 15px; top: 8px; color: #666; }
 
-.nav-right a { color: white; text-decoration: none; margin-left: 20px; padding-bottom: 5px; }
-.nav-right a.active { border-bottom: 3px solid #b8a000; }
+.nav-right a { color: white; text-decoration: none; margin-left: 25px; font-weight: bold; transition: 0.3s; }
+.nav-right a:hover { color: #b8a000; }
+.nav-right a.active { border-bottom: 3px solid #b8a000; padding-bottom: 5px; }
 
 /* BANNER */
 .banner-container {
     position: relative;
-    height: 250px;
+    height: 280px;
     background-image: url('uwp4614300.jpeg');
     background-size: cover;
     background-position: center;
 }
-
 .banner-overlay {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.banner-title { color: white; font-size: 4rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+.banner-title { color: white; font-size: 5rem; text-shadow: 3px 3px 6px rgba(0,0,0,0.7); margin: 0; }
 
 /* GAMES GRID */
-.container { padding: 40px 20px; }
-
+.container { padding: 50px 20px; }
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
-/* CLICKABLE GAME CARD */
+/* THE CLICKABLE GAME CARD */
 .game-card {
     background-color: #fff;
     border: 3px solid #1a1a1a;
-    border-radius: 12px;
+    border-radius: 15px;
     text-decoration: none;
     color: #1a1a1a;
     overflow: hidden;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    position: relative;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .game-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-12px) scale(1.02);
     border-color: #b8a000;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 .game-image-container {
     width: 100%;
-    height: 160px;
+    height: 180px;
     border-bottom: 2px solid #1a1a1a;
+    background-color: #eee;
 }
 
-.game-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.game-thumbnail { width: 100%; height: 100%; object-fit: cover; }
 
-.game-info {
-    padding: 15px;
-    text-align: center;
-}
+.game-info { padding: 15px; text-align: center; }
+.game-info h3 { margin: 0; font-size: 1.4rem; }
+.game-info p { margin: 8px 0 0; color: #777; font-size: 0.95rem; }
 
-.game-info h3 { margin: 0; font-size: 1.3rem; }
-.game-info p { margin: 5px 0 0; color: #777; font-size: 0.9rem; }
+/* SPECIALS (Badge & Minimalist) */
+.new-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #b8a000;
+    color: #1a1a1a;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #1a1a1a;
+    z-index: 5;
+}
+.mini-card .game-info { padding: 25px 15px; }
