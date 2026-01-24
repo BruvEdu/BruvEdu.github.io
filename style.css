@@ -1,12 +1,13 @@
-/* GENERAL SETTINGS */
+/* --- BASE SETTINGS --- */
 body {
     font-family: "Comic Sans MS", cursive;
     margin: 0;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
-/* TOP NAVIGATION */
+/* --- TOP NAVIGATION --- */
 .top-nav {
     background-color: #1a1a1a;
     color: white;
@@ -25,7 +26,6 @@ body {
 .nav-brand { font-size: 1.4rem; font-weight: bold; margin-left: 12px; color: #fff; }
 .nav-logo { height: 45px; width: 45px; border-radius: 50%; border: 2px solid #b8a000; object-fit: cover; }
 
-/* SEARCH BAR IN NAV */
 .nav-center { flex-grow: 1; display: flex; justify-content: center; }
 .search-box { position: relative; width: 350px; }
 #gameSearch {
@@ -42,7 +42,7 @@ body {
 .nav-right a:hover { color: #b8a000; }
 .nav-right a.active { border-bottom: 3px solid #b8a000; padding-bottom: 5px; }
 
-/* BANNER */
+/* --- BANNER --- */
 .banner-container {
     position: relative;
     height: 280px;
@@ -59,17 +59,50 @@ body {
 }
 .banner-title { color: white; font-size: 5rem; text-shadow: 3px 3px 6px rgba(0,0,0,0.7); margin: 0; }
 
-/* GAMES GRID */
-.container { padding: 50px 20px; }
+/* --- WELCOME & UPDATE LOG (Home Page) --- */
+.container { padding: 50px 20px; max-width: 1300px; margin: 0 auto; }
+
+.welcome-section {
+    text-align: center;
+    padding: 40px 0;
+}
+.welcome-text { color: #b8a000; font-size: 2.5rem; margin-bottom: 10px; }
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.cta-button:hover { background-color: #b8a000; transform: scale(1.05); }
+
+.update-log {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #fff;
+    border: 3px solid #1a1a1a;
+    border-radius: 15px;
+    text-align: left;
+}
+.section-title { color: #b8a000; text-align: center; margin-top: 0; }
+.log-entry { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+.log-entry:last-child { border-bottom: none; }
+.log-date { font-weight: bold; color: #1a1a1a; display: block; margin-bottom: 5px; }
+.update-log ul { padding-left: 20px; margin: 0; }
+.section-divider { border: 0; height: 2px; background: #1a1a1a; margin: 50px auto; width: 50%; }
+
+/* --- GAMES GRID (Games Page) --- */
 .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 35px;
-    max-width: 1300px;
-    margin: 0 auto;
 }
 
-/* THE CLICKABLE GAME CARD */
 .game-card {
     background-color: #fff;
     border: 3px solid #1a1a1a;
@@ -102,7 +135,7 @@ body {
 .game-info h3 { margin: 0; font-size: 1.4rem; }
 .game-info p { margin: 8px 0 0; color: #777; font-size: 0.95rem; }
 
-/* SPECIALS (Badge & Minimalist) */
+/* SPECIALS */
 .new-badge {
     position: absolute;
     top: 12px;
