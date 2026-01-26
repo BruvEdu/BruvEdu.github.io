@@ -77,6 +77,8 @@ body {
     border-radius: 30px;
     font-weight: bold;
     transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
 .cta-button:hover { background-color: #b8a000; transform: scale(1.05); }
 
@@ -135,6 +137,44 @@ body {
 .game-info h3 { margin: 0; font-size: 1.4rem; }
 .game-info p { margin: 8px 0 0; color: #777; font-size: 0.95rem; }
 
+/* --- FORMSPREE REQUEST FORM --- */
+.request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 12px;
+    border: 3px solid #1a1a1a; /* Matches game card border */
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #b8a000;
+    background-color: #fffef0; /* Subtle gold tint on focus */
+}
+
 /* SPECIALS */
 .new-badge {
     position: absolute;
@@ -145,7 +185,4 @@ body {
     padding: 5px 12px;
     font-weight: bold;
     border-radius: 8px;
-    border: 2px solid #1a1a1a;
-    z-index: 5;
-}
-.mini-card .game-info { padding: 25px 15px; }
+    border: 2px solid #1
