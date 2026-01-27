@@ -161,7 +161,7 @@ body {
 .form-group input, 
 .form-group textarea {
     padding: 12px;
-    border: 3px solid #1a1a1a; /* Matches game card border */
+    border: 3px solid #1a1a1a;
     border-radius: 12px;
     font-family: inherit;
     font-size: 1rem;
@@ -172,10 +172,20 @@ body {
 .form-group input:focus, 
 .form-group textarea:focus {
     border-color: #b8a000;
-    background-color: #fffef0; /* Subtle gold tint on focus */
+    background-color: #fffef0;
 }
 
-/* SPECIALS */
+/* --- DOWNLOAD & OFFLINE CARD SPECIALS --- */
+.game-card[download] {
+    border-style: dashed; /* Visual cue for download files */
+    background-color: #f9f9f9;
+}
+
+.game-card[download]:hover {
+    border-style: solid;
+    background-color: #fffef0;
+}
+
 .new-badge {
     position: absolute;
     top: 12px;
@@ -185,4 +195,14 @@ body {
     padding: 5px 12px;
     font-weight: bold;
     border-radius: 8px;
-    border: 2px solid #1
+    border: 2px solid #1a1a1a;
+    z-index: 5;
+}
+
+/* For Offline Clients Badge */
+.game-card[download] .new-badge {
+    background: #1a1a1a;
+    color: #b8a000;
+}
+
+.mini-card .game-info { padding: 25px 15px; }
